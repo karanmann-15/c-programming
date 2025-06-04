@@ -1,0 +1,2756 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\froman\fcharset0 TimesNewRomanPS-ItalicMT;
+\f3\froman\fcharset0 Times-Roman;\f4\fnil\fcharset0 LucidaGrande;\f5\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat6\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+{\info
+{\author Karanvir Mann}}\margl1440\margr1440\vieww12540\viewh16140\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl278\slmult1\sa160\partightenfactor0
+
+\f0\fs24 \cf0 C programming exam (mastery)\
+\pard\pardeftab720\li720\fi-360\ri0\partightenfactor0
+\ls1\ilvl0
+\f1 \cf0 -	\expnd0\expndtw0\kerning0
+name all types + modifiers\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+list their ranges on 8, 16, 32 and 64 bit systems\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+define and derive type arithmetic (and shortcomings)\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	describe the purpose of auto, break, case, const, continue, default, do, else, enum, extern, for, goto, if, inline, register, restrict, return, sizeof, static, struct, switch, typedef, union, volatile, _atomic, _alignas, _alignof, _bool, _complex, _generic, _imaginary, _noreturn, _static_assert, _thread_local\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	write a program that determines endianness of the system\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	describe the purpose of macros\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	implement a function that extracts the exponent part of an IEEE 754 float\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	demonstrate precision loss when converting a double to a float with specific values\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write code to compare the binary representation of 
+\fs20 0.1f 
+\fs24 and 
+\fs20 0.1 
+\fs24 in IEEE 754 format\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+explain why 
+\fs20 0.1 + 0.2 == 0.3 
+\fs24 fails in floating point and write code to test it\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+explain why using 
+\fs20 sizeof(char) == 1 
+\fs24 does not imply 8-bit bytes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a macro to determine the number of bits in an 
+\fs20 int 
+\fs24 using bitwise ops\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a function to reverse the byte order of a 
+\fs20 double 
+\fs24 and show output\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\fs20 \expnd0\expndtw0\kerning0
+ 
+\fs24 explain how padding and alignment affect size of structs with primitive types\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+demonstrate alignment differences between 
+\fs20 float 
+\fs24 and 
+\fs20 int 
+\fs24 in packed structs\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a function to count the number of set bits in a 
+\fs20 short 
+\fs24 using only primitive types\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+given 
+\fs20 float f = 16777217;
+\fs24 , explain the output when printing 
+\fs20 f 
+\fs24 as an integer\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+use 
+\fs20 union 
+\fs24 to interpret a 
+\fs20 float 
+\fs24 as 
+\fs20 int 
+\fs24 and modify its exponent bits\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a function that detects NaN values using only bitwise operations\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+implement a comparison function that checks if two 
+\fs20 float
+\fs24 s are "almost equal"\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+analyze precision error when adding 1e-10 to 1.0 in both 
+\fs20 float 
+\fs24 and 
+\fs20 double
+\fs24 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+demonstrate how implicit type promotion affects the result of 
+\fs20 char + int
+\fs24 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+use 
+\fs20 volatile 
+\fs24 with a primitive type and explain the implications in optimization\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+evaluate the behavior of shifting a 
+\fs20 signed int 
+\fs24 left by 31 bits\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+determine whether 
+\fs20 float x = (float)INT_MAX + 1; 
+\fs24 retains accuracy\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a function that prints the binary representation of a 
+\fs20 double 
+\fs24 using only C\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+implement multiplication using bitwise operations only for 
+\fs20 int
+\fs24 s\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+demonstrate signed vs. unsigned division results with edge-case values\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+explain aliasing rules with 
+\fs20 int* 
+\fs24 and 
+\fs20 float* 
+\fs24 and how strict aliasing affects behavior\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+analyze behavior of 
+\fs20 int a = 0xFFFFFFFF >> 1; 
+\fs24 on both signed and unsigned types\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	\expnd0\expndtw0\kerning0
+write a benchmark to compare speed of 
+\fs20 int
+\fs24 , 
+\fs20 float
+\fs24 , and 
+\fs20 double 
+\fs24 arithmetic\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 explain type decay in function parameters when passing arrays of primitive types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 write a function that returns the machine epsilon for 
+\fs20 float\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 show that 
+\fs20 sizeof(double) > sizeof(float) 
+\fs24 but they may have same range in edge\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i \expnd0\expndtw0\kerning0
+cases\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 write code that triggers loss of significance in floating point subtraction\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 show that 
+\fs20 (x + y) + z != x + (y + z) 
+\fs24 with float or double examples\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 implement a rounding function for 
+\fs20 float 
+\fs24 to nearest 
+\fs20 int 
+\fs24 without using stdlib\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 analyze behavior of casting 
+\fs20 float 
+\fs24 to 
+\fs20 unsigned int 
+\fs24 when 
+\fs20 float 
+\fs24 is negative\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 determine how many 
+\fs20 float
+\fs24 s are between 
+\fs20 1.0f 
+\fs24 and 
+\fs20 2.0f\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 prove that the number of 
+\fs20 float 
+\fs24 values is finite and show code to explore this\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 write code that adds 0.1 to a 
+\fs20 float 
+\fs24 one million times and compares to expected result\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 explain how implicit narrowing can silently corrupt data in mixed-type expressions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 write a safe function that multiplies two 
+\fs20 int
+\fs24 s and checks for overflow\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 demonstrate why rounding errors can accumulate in loops using 
+\fs20 float\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 compare results of computing the same arithmetic expression using 
+\fs20 float
+\fs24 , 
+\fs20 double
+\fs24 , and\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+long double\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 implement a function that normalizes a 
+\fs20 float 
+\fs24 to its IEEE 754 form manually\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 enums\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define an enum with at least 5 values and print their integer equivalents\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use an enum in a switch statement and demonstrate fall-through\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate how to assign specific integer values to enum constants\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show how enum scope behaves within and outside of functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that returns a string representation of an enum\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use typedef with an enum and show its usage in a function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare two enum values from different enum types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that depends on enum ordering to function correctly\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate how enum values can cause logic bugs if not explicitly assigned\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use an enum to represent bit flags and implement bitmask operations\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain what happens when an invalid enum value is cast from int\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define an anonymous enum and use it in an expression\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 initialize an array using enum values as indices\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that checks if an enum value is within bounds\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 enum 
+\fs24 in a struct and access its fields\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 variables\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate automatic vs. static storage duration with a counter function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show what happens when an uninitialized variable is used\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a shadowed variable and explain the scope rules\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a global variable and explain its linkage\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define and use variables with all storage classes\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 analyze variable lifetime in a loop\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show the output of modifying a variable in a called function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 register 
+\fs24 (if supported) and compare to automatic variable\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 declare and use a const pointer to a variable\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate the use of variable declarations inside 
+\fs20 for 
+\fs24 statements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use variable-length arrays and compare to static arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show name mangling differences with static vs. non-static globals
+\f1\i0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a program using only one global and the rest local variables\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate side effects of using global variables in recursion\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show behavior when modifying const-qualified variables via casting\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 type conversion\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show implicit conversion in mixed arithmetic expressions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate narrowing conversion and its result with overflow\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that converts 
+\fs20 float 
+\fs24 to 
+\fs20 int 
+\fs24 and explains rounding\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use explicit casts to change variable types and compare results\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 analyze integer promotion when using 
+\fs20 char 
+\fs24 and 
+\fs20 short\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate loss of precision when assigning 
+\fs20 double 
+\fs24 to 
+\fs20 float\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that uses conversion to avoid overflow\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare signed and unsigned types in expressions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show behavior when casting large 
+\fs20 int 
+\fs24 to 
+\fs20 char\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate pointer type casting and aliasing effects\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare casts vs. unions for type punning\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 cast between different enum types and explain the result\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show how implicit conversion affects conditional statements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a cast to force evaluation order in a complex expression\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code where type conversion causes a subtle logic bug\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 operators\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement operator precedence puzzle and explain the result\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate use of compound assignment and its precedence\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show behavior of post-increment vs. pre-increment\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use bitwise operators to manipulate flags\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate overflow behavior with arithmetic operators\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show short-circuit evaluation with logical operators\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write an expression using ternary operator and nested logic\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a macro using 
+\fs20 ?: 
+\fs24 to select min or max\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a complex expression using parentheses to override precedence\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use comma operator in a loop and explain execution order\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show the difference between 
+\fs20 == 
+\fs24 and 
+\fs20 = 
+\fs24 in a control structure\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use bit shift operators to multiply and divide integers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate undefined behavior using 
+\fs20 x = x++;\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement custom behavior using logical NOT with integers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 analyze associativity of operators using nested expressions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 extern/static/volatile\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate linking error when 
+\fs20 extern 
+\fs24 variable is not defined\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show use of 
+\fs20 static 
+\fs24 to restrict linkage across translation units\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain behavior of a function with a 
+\fs20 static 
+\fs24 local counter\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 volatile 
+\fs24 with a variable modified inside an interrupt simulation\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare performance of 
+\fs20 volatile 
+\fs24 and non-volatile loops\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a program that uses both 
+\fs20 extern 
+\fs24 and 
+\fs20 static 
+\fs24 variables\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain how 
+\fs20 static 
+\fs24 affects function declarations in headers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate memory-mapped hardware using 
+\fs20 volatile 
+\fs24 and access macros\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a 
+\fs20 static const 
+\fs24 array and use it in a function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 observe compiler optimization differences with and without 
+\fs20 volatile
+\f1\i0\fs24 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show that 
+\fs20 volatile 
+\fs24 does not prevent race conditions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate undefined behavior with incorrect extern declarations\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define multiple functions using static variables and show independence\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 access an 
+\fs20 extern 
+\fs24 variable in multiple translation units\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 extern 
+\fs24 with a function prototype and define it later\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 strings/arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 initialize a character array and print it with 
+\fs20 printf\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare two strings using 
+\fs20 strcmp\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that reverses a string in-place\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use array notation and pointer notation to access array elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a multidimensional array and initialize it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate out-of-bounds access and its consequences\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that counts the frequency of characters in a string\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate pointer decay in function arguments with arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a jagged array using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 initialize a string using pointer to literal and try to modify it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain difference between 
+\fs20 char* 
+\fs24 and 
+\fs20 char[] 
+\fs24 in function parameters\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass an array to a function and modify its elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show how 
+\fs20 sizeof 
+\fs24 behaves with arrays in and out of functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement manual 
+\fs20 strlen 
+\fs24 without using standard library\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a constant array and prevent it from being modified\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 control flow\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement nested 
+\fs20 if 
+\fs24 statements with complex conditions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate fall-through behavior in 
+\fs20 switch\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a loop that exits using 
+\fs20 break 
+\fs24 at a specific condition\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 continue 
+\fs24 to skip specific values in a loop\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create an infinite loop and break out based on a condition\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement early return from a function based on condition\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 goto 
+\fs24 and labels to simulate a finite state machine\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 nest loops and use 
+\fs20 break 
+\fs24 with labels (if supported)\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a loop that uses multiple counters in its condition\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a program with deeply nested control flow and simplify it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare the use of 
+\fs20 for
+\fs24 , 
+\fs20 while
+\fs24 , and 
+\fs20 do...while 
+\fs24 for the same task\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a 
+\fs20 switch 
+\fs24 with default and missing cases\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate loop unrolling manually\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate a 
+\fs20 case 
+\fs24 range using multiple 
+\fs20 if
+\fs24 s\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 handle invalid input with error checking and recovery logic\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a function that takes multiple parameters and returns a value\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that modifies values using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass an array to a function and process its elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show function declaration vs. definition and linkage\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function with default parameter simulation using macros\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use function pointers to call different implementations\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that accepts another function as a parameter
+\f1\i0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate incorrect usage of function return types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that returns multiple values using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show behavior of passing structs by value vs. by reference\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a higher-order function using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate method dispatch using a table of function pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define inline functions and observe impact on performance\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare tail-call optimization vs. normal calls\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 recursion\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement factorial recursively and iteratively\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement Fibonacci with and without memoization\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a recursive function that reverses a string\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use recursion to traverse a binary tree\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate stack overflow using deep recursion\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a recursive function to compute power of a number\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement binary search recursively\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a recursive descent parser for a simple expression\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate backtracking with recursion\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a tail-recursive function and compare with non-tail\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show how static variables behave in recursive functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 optimize recursion using accumulator arguments\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare speed and memory usage of recursive vs. iterative\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use mutual recursion between two functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write recursive function to generate all permutations of a string\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 preprocessor directives\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 #define 
+\fs24 to declare a constant and use it in code\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a macro that accepts parameters and performs a calculation\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 #ifdef
+\fs24 , 
+\fs20 #ifndef
+\fs24 , and 
+\fs20 #endif 
+\fs24 to control compilation\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define include guards for a header file\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate pitfalls with macro expansion and side effects\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a macro that returns max of two values safely\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 #undef 
+\fs24 to remove a macro and redefine it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a macro that simulates a simple generic type\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 #pragma 
+\fs24 to disable specific warnings (compiler-specific)\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement conditional compilation based on platform or OS\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 __FILE__
+\fs24 , 
+\fs20 __LINE__
+\fs24 , 
+\fs20 __func__ 
+\fs24 macros in logging\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate macro token pasting with 
+\fs20 ##\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use stringizing 
+\fs20 # 
+\fs24 operator in a macro\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that fails to compile due to improper macro nesting\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show how preprocessor affects code structure before compilation\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 variable and function scope\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define variables with same name in different scopes and show which is used\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show difference between global, local, and static variables\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that modifies a static local variable across calls\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate shadowing and how to avoid it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 extern 
+\fs24 to access a variable defined in another file\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define static functions and show how they can't be accessed externally
+\f1\i0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain symbol visibility in a multi-file program\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show that automatic variables are reinitialized each time\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use block-level scoping inside 
+\fs20 if 
+\fs24 and 
+\fs20 for 
+\fs24 blocks\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code where incorrect use of 
+\fs20 extern 
+\fs24 causes a linker error\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain the use of 
+\fs20 static 
+\fs24 for internal linkage optimization\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate a bug from using 
+\fs20 extern 
+\fs24 variable before it\'92s defined\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare memory allocation of static vs. automatic scope\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 static 
+\fs24 inside a header file and show the impact\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function with a static array and explain scope/lifetime\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 address space layout\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 print the address of a global, local, and static variable\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare addresses of code, heap, stack, and static data\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 dynamically allocate memory and compare with stack-allocated variables\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate stack growth by calling recursive functions and printing addresses\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 allocate memory using malloc and observe address range\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a function pointer and print its address\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 modify a global variable using a pointer and observe address\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 differentiate between bss and data segment using uninitialized vs initialized\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i \expnd0\expndtw0\kerning0
+globals\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use objdump or similar tool to analyze layout of a compiled binary\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that triggers stack overflow and explain why\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a large global array and explain its placement in the address space\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate how address alignment affects struct layout\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 observe address reuse after local variables go out of scope\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show address differences between elements in an array\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use 
+\fs20 uintptr_t 
+\fs24 to perform arithmetic on pointer addresses\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 declare a pointer and assign it the address of a variable\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 dereference a pointer and modify the original variable\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare two pointers and print which is higher in memory\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 allocate and free memory using malloc and free\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that swaps two values using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate pointer arithmetic with arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a pointer to a pointer and access the original value\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 initialize a pointer to NULL and check before dereferencing\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that causes segmentation fault via dangling pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 print size of different pointer types using sizeof\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 cast a pointer to 
+\fs20 void* 
+\fs24 and back\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a pointer to an array and access its elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a pointer to a function and modify the original data\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 store array base address in a pointer and traverse it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain behavior of wild, null, and dangling pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 pointers as function arguments\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that modifies an int via pointer argument\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a pointer to a struct and change a field\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass an array to a function and access elements via pointer
+\f1\i0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a pointer to pointer and allocate memory inside function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show difference between passing by pointer and by value\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use const pointer as argument to prevent modification\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that sets multiple output values using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a wrapper function that accepts a pointer to buffer and fills it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show memory leak if allocated memory is not freed after being returned\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate passing pointer to function and modifying global state\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a utility that returns minimum and maximum in an array using pointer args\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show incorrect modification due to missing dereference\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a function that validates a pointer before use\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 analyze scope of memory allocated inside a function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write function to reverse a string in place via pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 pointers to functions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 declare a function pointer and assign it a function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 call a function using a function pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that accepts another function as an argument\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use an array of function pointers for dispatch\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a callback mechanism using function pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a comparison function to 
+\fs20 qsort\
+\ls1\ilvl0
+\f1\i0\fs24 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define typedef for a function pointer and use it\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that switches function pointers at runtime\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate polymorphism using function pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use pointer to a function that returns a pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 return a function pointer from another function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write code that stores function pointers in a struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show pointer arithmetic is invalid for function pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate error when calling through a NULL function pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 assign and use function pointers with different signatures (cause warning)\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 void pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 declare a void pointer and assign address of various types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 cast void pointer to specific type before dereferencing\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a void pointer to implement generic array print function\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that accepts a void pointer and a type tag\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate undefined behavior from dereferencing a void pointer without cast\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement generic swap using void pointers and size argument\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use void pointer with malloc and cast it to target type\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate polymorphic behavior using void pointer in a struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement type-safe wrapper for void pointer usage\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show the output of printing values accessed through void pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 store addresses of different types in void pointer array\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a void pointer through multiple functions and cast back\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show that arithmetic is not allowed on void pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use memcpy to operate on memory through void pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a macro that accepts any type via void pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 multi-dimensional arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 declare and initialize a 2D array
+\f1\i0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that takes a 2D array and prints its contents\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use pointer arithmetic to access 2D array elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define and access a 3D array\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a 2D array to a function with fixed column size\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 dynamically allocate a 2D array using pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare performance of row-major vs. column-major access\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement matrix multiplication for 2D arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show memory layout of multi-dimensional arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate type decay when passing multi-dimensional arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a macro to iterate through elements of a 2D array\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 initialize a 2D array with nested loops\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain padding and alignment in multi-dimensional arrays\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate 2D arrays using 1D array indexing\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 free a dynamically allocated 2D array properly\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 structs\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a struct and initialize its members\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that takes a struct by value and modifies a copy\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that modifies a struct via pointer\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a struct with nested structs\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 access struct members through pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use typedef with struct for cleaner code\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare size of struct with and without padding\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 pass a struct array to a function and access its elements\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that returns a struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use a struct to simulate a class with method pointers\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 implement a linked list node as a struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 align struct members to minimize memory usage\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use designated initializers to initialize a struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 access struct fields using pointer arithmetic (invalid)\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a const struct and prevent its modification\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+\'95 
+\fs24 unions\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 define a union and assign different member types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 show that all union members share the same memory\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use union to store different representations of a float\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a program that modifies union fields and prints all values\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate type punning using union\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 create a tagged union with an enum type field\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 access union members in sequence and explain behavior\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 write a function that initializes a union based on input type\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 use union to interpret binary data of different types\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 demonstrate memory overlap in union by printing addresses\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 compare size of union with its largest member\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 simulate optional fields using union inside struct\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 cast a pointer to union and access member\
+\ls1\ilvl0
+\f1\i0 \kerning1\expnd0\expndtw0 -	
+\f2\i\fs20 \expnd0\expndtw0\kerning0
+o 
+\fs24 explain what happens when accessing inactive union member
+\f1\i0 \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0  
+\f2\i\fs20 \'95 
+\fs24 bit fields\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\fs20 \cf0 o 
+\fs24 define a struct with bit fields and print its size\
+
+\fs20 o 
+\fs24 set and clear specific bits using bit fields\
+
+\fs20 o 
+\fs24 show how bit fields can pack data efficiently\
+
+\fs20 o 
+\fs24 demonstrate signed vs unsigned bit fields behavior\
+
+\fs20 o 
+\fs24 use bit fields to implement flags and check them\
+
+\fs20 o 
+\fs24 explain alignment and padding effects on bit fields\
+
+\fs20 o 
+\fs24 write a function that manipulates bit fields directly\
+
+\fs20 o 
+\fs24 compare memory layout of bit fields with normal members\
+
+\fs20 o 
+\fs24 demonstrate limitations of bit field sizes and types\
+
+\fs20 o 
+\fs24 show how bit fields behave when values overflow their width\
+
+\fs20 o 
+\fs24 implement a protocol header parser using bit fields\
+
+\fs20 o 
+\fs24 use bit fields inside unions for alternative views\
+
+\fs20 o 
+\fs24 explain why bit fields cannot have addresses taken\
+
+\fs20 o 
+\fs24 demonstrate compiler-specific differences in bit field packing\
+
+\fs20 o 
+\fs24 use bit fields to reduce memory in large arrays of structs\
+
+\fs20 \'95 
+\fs24 const/volatile\
+
+\fs20 o 
+\fs24 declare const variables and try to modify them (show error)\
+
+\fs20 o 
+\fs24 use const pointers and pointers to const data correctly\
+
+\fs20 o 
+\fs24 demonstrate volatile usage with hardware register simulation\
+
+\fs20 o 
+\fs24 explain const correctness in function parameters\
+
+\fs20 o 
+\fs24 show difference between const and volatile qualifiers\
+
+\fs20 o 
+\fs24 write a function that accepts const volatile pointer and uses it\
+
+\fs20 o 
+\fs24 show how const affects optimization and code generation\
+
+\fs20 o 
+\fs24 demonstrate undefined behavior from casting away const\
+
+\fs20 o 
+\fs24 use volatile to prevent compiler optimization in loops\
+
+\fs20 o 
+\fs24 combine const and volatile on pointers and variables\
+
+\fs20 o 
+\fs24 explain const in return types of functions\
+
+\fs20 o 
+\fs24 show how const restricts modifying string literals\
+
+\fs20 o 
+\fs24 write code that fails due to trying to modify const qualified data\
+
+\fs20 o 
+\fs24 use volatile with multithreaded or signal handler context\
+
+\fs20 o 
+\fs24 demonstrate use of const and volatile in struct members\
+
+\fs20 \'95 
+\fs24 typedef\
+
+\fs20 o 
+\fs24 create typedef for primitive types and use them\
+
+\fs20 o 
+\fs24 typedef a struct and use it without 
+\fs20 struct 
+\fs24 keyword\
+
+\fs20 o 
+\fs24 define function pointer typedefs and use them\
+
+\fs20 o 
+\fs24 use typedef to create alias for pointer types\
+
+\fs20 o 
+\fs24 combine typedef with const and volatile qualifiers\
+
+\fs20 o 
+\fs24 show typedef for arrays and multi-dimensional arrays\
+
+\fs20 o 
+\fs24 create opaque types using typedef and incomplete structs\
+
+\fs20 o 
+\fs24 typedef union types and use them in code\
+
+\fs20 o 
+\fs24 demonstrate typedef with enums for better readability\
+
+\fs20 o 
+\fs24 use typedef to simplify complex pointer syntax\
+
+\fs20 o 
+\fs24 define typedef for callback function signatures\
+\pard\pardeftab720\li360\ri0\partightenfactor0
+
+\fs20 \cf0 o 
+\fs24 show typedef for integer types from stdint.h\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\fs20 \cf0 o 
+\fs24 demonstrate typedef for size_t and other stddef types\
+
+\fs20 o 
+\fs24 use typedef to create boolean types before stdbool.h\
+
+\fs20 \'95 
+\fs24 inline functions\
+
+\fs20 o 
+\fs24 define an inline function and explain benefits\
+
+\fs20 o 
+\fs24 compare inline function call with macro usage\
+
+\fs20 o 
+\fs24 demonstrate when inline functions are not inlined\
+
+\fs20 o 
+\fs24 use static inline functions in header files\
+
+\fs20 o 
+\fs24 show multiple definitions of inline functions across translation units\
+
+\fs20 o 
+\fs24 write recursive inline functions and analyze compiler behavior\
+
+\fs20 o 
+\fs24 use inline functions with const parameters\
+
+\fs20 o 
+\fs24 compare code size and performance of inline vs regular functions\
+
+\fs20 o 
+\fs24 demonstrate inline functions with function pointers\
+
+\fs20 o 
+\fs24 write an inline function that replaces a simple arithmetic macro\
+
+\fs20 o 
+\fs24 show error when defining non-inline functions as inline without definition\
+
+\fs20 o 
+\fs24 implement inline function with conditional compilation\
+
+\fs20 o 
+\fs24 use inline functions to implement getters/setters for structs\
+
+\fs20 o 
+\fs24 show inline functions in C99 vs C11 standards\
+
+\fs20 o 
+\fs24 combine inline with static and extern keywords\
+
+\fs20 \'95 
+\fs24 stdio.h\
+
+\fs20 o 
+\fs24 read and write files using fopen, fclose, fread, fwrite\
+
+\fs20 o 
+\fs24 use printf format specifiers and write formatted output\
+
+\fs20 o 
+\fs24 implement input reading using scanf with different formats\
+
+\fs20 o 
+\fs24 demonstrate buffered vs unbuffered I/O using fflush\
+
+\fs20 o 
+\fs24 use fprintf and fscanf with file streams\
+
+\fs20 o 
+\fs24 show error handling with perror and ferror\
+
+\fs20 o 
+\fs24 write code that uses fseek and ftell to navigate files\
+
+\fs20 o 
+\fs24 read a line from stdin using fgets safely\
+
+\fs20 o 
+\fs24 demonstrate use of stdout, stdin, stderr streams\
+
+\fs20 o 
+\fs24 use temporary files with tmpfile and tmpnam\
+
+\fs20 o 
+\fs24 write a program that redirects output to a file\
+
+\fs20 o 
+\fs24 explain differences between text and binary mode\
+
+\fs20 o 
+\fs24 demonstrate use of vprintf and related functions\
+
+\fs20 o 
+\fs24 write code to append data to an existing file\
+
+\fs20 o 
+\fs24 explain importance of closing files and resource leaks\
+
+\fs20 \'95 
+\fs24 stdlib.h\
+
+\fs20 o 
+\fs24 allocate and free memory with malloc, calloc, realloc, free\
+
+\fs20 o 
+\fs24 convert strings to numbers using atoi, strtol, atof\
+
+\fs20 o 
+\fs24 generate random numbers with rand and srand\
+
+\fs20 o 
+\fs24 use qsort to sort arrays with custom comparator\
+
+\fs20 o 
+\fs24 implement binary search using bsearch\
+
+\fs20 o 
+\fs24 exit program with exit and atexit handlers\
+
+\fs20 o 
+\fs24 demonstrate getenv to read environment variables\
+
+\fs20 o 
+\fs24 use system to execute shell commands\
+
+\fs20 o 
+\fs24 parse command line arguments using strtol and error handling\
+
+\fs20 o 
+\fs24 convert numbers to strings with itoa or snprintf\
+
+\fs20 o 
+\fs24 demonstrate integer division rounding behavior\
+
+\fs20 o 
+\fs24 use abs and labs for absolute value calculations\
+
+\fs20 o 
+\fs24 implement safe memory allocation wrappers\
+
+\fs20 o 
+\fs24 explain differences between malloc and calloc\
+
+\fs20 o 
+\fs24 show how realloc behaves on failure and success\
+
+\fs20 \'95 
+\fs24 string.h\
+
+\fs20 o 
+\fs24 copy strings safely using strcpy, strncpy, and explain pitfalls\
+
+\fs20 o 
+\fs24 concatenate strings with strcat and strncat\
+
+\fs20 o 
+\fs24 compare strings using strcmp and strncmp\
+
+\fs20 o 
+\fs24 find substrings with strstr\
+
+\fs20 o 
+\fs24 calculate string length with strlen\
+
+\fs20 o 
+\fs24 set memory blocks with memset\
+
+\fs20 o 
+\fs24 copy memory blocks with memcpy and memmove and explain difference\
+
+\fs20 o 
+\fs24 tokenize strings using strtok and its reentrancy issues\
+
+\fs20 o 
+\fs24 find characters in strings with strchr and strrchr\
+
+\fs20 o 
+\fs24 compare memory blocks with memcmp\
+
+\fs20 o 
+\fs24 convert case using locale-aware functions\
+
+\fs20 o 
+\fs24 write code that avoids buffer overruns in string ops\
+
+\fs20 o 
+\fs24 demonstrate how to safely build strings with snprintf\
+
+\fs20 o 
+\fs24 show behavior of zero-length strings and empty buffers\
+
+\fs20 o 
+\fs24 explain differences between char arrays and string literals\
+
+\fs20 \'95 
+\fs24 math.h\
+
+\fs20 o 
+\fs24 compute trigonometric functions like sin, cos, tan\
+
+\fs20 o 
+\fs24 calculate powers and roots with pow and sqrt\
+
+\fs20 o 
+\fs24 use logarithms and exponentials log, log10, exp\
+
+\fs20 o 
+\fs24 round floating-point numbers using ceil, floor, round\
+
+\fs20 o 
+\fs24 generate random floating point numbers with drand48 (if available)\
+
+\fs20 o 
+\fs24 demonstrate floating point comparisons with epsilon\
+
+\fs20 o 
+\fs24 use fabs for absolute values of floats\
+
+\fs20 o 
+\fs24 compute remainder using fmod and remainder\
+
+\fs20 o 
+\fs24 use special functions like isnan, isinf, signbit\
+
+\fs20 o 
+\fs24 explain domain errors and errno after math calls\
+
+\fs20 o 
+\fs24 calculate hypotenuse with hypot\
+
+\fs20 o 
+\fs24 implement fast inverse square root and compare with math.h\
+
+\fs20 o 
+\fs24 demonstrate use of complex numbers with 
+\fs20 <complex.h> 
+\fs24 if available\
+
+\fs20 o 
+\fs24 show impact of floating point exceptions on math functions\
+
+\fs20 o 
+\fs24 analyze rounding errors in transcendental functions\
+
+\fs20 \'95 
+\fs24 ctype.h\
+
+\fs20 o 
+\fs24 test characters using isalpha, isdigit, isspace\
+
+\fs20 o 
+\fs24 convert characters between uppercase and lowercase\
+
+\fs20 o 
+\fs24 implement own version of isalnum using ctype functions\
+
+\fs20 o 
+\fs24 demonstrate undefined behavior when passing negative values except EOF\
+
+\fs20 o 
+\fs24 use tolower and toupper with non-ASCII inputs\
+
+\fs20 o 
+\fs24 check for printable characters with isprint\
+
+\fs20 o 
+\fs24 parse tokens in a string using ctype functions\
+
+\fs20 o 
+\fs24 use isxdigit to parse hexadecimal input\
+
+\fs20 o 
+\fs24 explain locale impact on ctype functions\
+
+\fs20 o 
+\fs24 implement a function to strip whitespace from strings\
+
+\fs20 o 
+\fs24 write code that counts vowels using ctype.h\
+
+\fs20 o 
+\fs24 demonstrate behavior of iscntrl for control characters\
+
+\fs20 o 
+\fs24 show how to validate input characters in a form\
+
+\fs20 o 
+\fs24 use ctype.h in validating file names or identifiers\
+
+\fs20 o 
+\fs24 compare performance of ctype vs manual checks\
+
+\fs20 \'95 
+\fs24 time.h\
+
+\fs20 o 
+\fs24 get current calendar time with time()\
+
+\fs20 o 
+\fs24 format time as string using strftime\
+
+\fs20 o 
+\fs24 convert time_t to struct tm and vice versa\
+
+\fs20 o 
+\fs24 measure elapsed time with clock() and CLOCKS_PER_SEC\
+
+\fs20 o 
+\fs24 implement a delay using nanosleep or sleep\
+
+\fs20 o 
+\fs24 parse date/time strings using strptime (POSIX)\
+
+\fs20 o 
+\fs24 calculate difference between two times with difftime\
+
+\fs20 o 
+\fs24 set and get timezone information\
+
+\fs20 o 
+\fs24 demonstrate thread-safety issues with localtime and gmtime\
+
+\fs20 o 
+\fs24 use time to seed random number generator\
+
+\fs20 o 
+\fs24 write code that handles daylight saving time changes\
+
+\fs20 o 
+\fs24 convert between UTC and local time\
+
+\fs20 o 
+\fs24 implement a stopwatch using time functions\
+
+\fs20 o 
+\fs24 use timers to measure performance of code blocks\
+
+\fs20 o 
+\fs24 explain limitations of time resolution and accuracy\
+
+\fs20 \'95 
+\fs24 assert.h\
+
+\fs20 o 
+\fs24 write code that uses assert to check function preconditions\
+
+\fs20 o 
+\fs24 demonstrate program termination on failed assertion\
+
+\fs20 o 
+\fs24 disable assertions with NDEBUG macro and show effect\
+
+\fs20 o 
+\fs24 implement self-checking functions using assert\
+
+\fs20 o 
+\fs24 use assert to verify postconditions after computations\
+
+\fs20 o 
+\fs24 compare assert with error handling via return codes\
+
+\fs20 o 
+\fs24 write complex expressions inside assert and explain behavior\
+
+\fs20 o 
+\fs24 use assert for debugging memory boundaries\
+
+\fs20 o 
+\fs24 demonstrate assert usage in multi-threaded contexts\
+
+\fs20 o 
+\fs24 write custom assertion messages using macros\
+
+\fs20 o 
+\fs24 use assert to verify invariants in data structures\
+
+\fs20 o 
+\fs24 show difference between assert and static_assert (C11)\
+
+\fs20 o 
+\fs24 explain side effects if code with assert has function calls\
+
+\fs20 o 
+\fs24 integrate assert checks into unit tests\
+
+\fs20 o 
+\fs24 write conditional assertions based on debug levels\
+
+\fs20 \'95 
+\fs24 errno.h\
+
+\fs20 o 
+\fs24 check and print errno after a failing system call\
+
+\fs20 o 
+\fs24 demonstrate setting errno explicitly in user code\
+
+\fs20 o 
+\fs24 use perror and strerror to display error messages\
+
+\fs20 o 
+\fs24 show common errno values like EINVAL, ENOMEM, EPERM\
+
+\fs20 o 
+\fs24 write code that retries on EINTR errors\
+
+\fs20 o 
+\fs24 explain thread-safety of errno in multi-threaded programs\
+
+\fs20 o 
+\fs24 demonstrate how to save and restore errno in library functions\
+
+\fs20 o 
+\fs24 use errno to diagnose malloc failure\
+
+\fs20 o 
+\fs24 handle errno when opening files fails\
+
+\fs20 o 
+\fs24 simulate error handling using errno in custom functions\
+
+\fs20 o 
+\fs24 show difference between errno and return values\
+
+\fs20 o 
+\fs24 write wrapper functions that set errno appropriately\
+
+\fs20 o 
+\fs24 analyze errno values from network socket calls (POSIX)\
+
+\fs20 o 
+\fs24 demonstrate race conditions affecting errno\
+
+\fs20 o 
+\fs24 use errno macros to handle platform-specific errors\
+
+\fs20 \'95 
+\fs24 stddef.h\
+
+\fs20 o 
+\fs24 use size_t for sizes and indices\
+
+\fs20 o 
+\fs24 demonstrate offsetof macro with structs\
+
+\fs20 o 
+\fs24 use ptrdiff_t to represent pointer differences\
+
+\fs20 o 
+\fs24 declare NULL and use it in pointer comparisons\
+
+\fs20 o 
+\fs24 explain difference between NULL and nullptr in C++\
+
+\fs20 o 
+\fs24 use max_align_t to understand alignment requirements\
+
+\fs20 o 
+\fs24 write code that casts between pointer and integer types safely\
+
+\fs20 o 
+\fs24 use stddef.h types in generic memory functions\
+
+\fs20 o 
+\fs24 implement container_of macro using offsetof\
+
+\fs20 o 
+\fs24 explain limitations of offsetof with non-standard types\
+
+\fs20 o 
+\fs24 demonstrate use of size_t in loops and memory allocations\
+
+\fs20 o 
+\fs24 use ptrdiff_t to calculate distance between pointers in arrays\
+
+\fs20 o 
+\fs24 use NULL in conditional pointer checks and function returns\
+
+\fs20 o 
+\fs24 explain how size_t differs from int and unsigned int\
+
+\fs20 o 
+\fs24 show portability considerations when using stddef.h types\
+
+\fs20 \'95 
+\fs24 stdint.h\
+
+\fs20 o 
+\fs24 use fixed-width integer types like int32_t, uint64_t\
+
+\fs20 o 
+\fs24 demonstrate limits using INT_MAX, UINT_MAX macros\
+
+\fs20 o 
+\fs24 perform portable bit manipulation using stdint types\
+
+\fs20 o 
+\fs24 write code to serialize and deserialize integer values\
+
+\fs20 o 
+\fs24 compare size and range of int_fast8_t and int_least8_t\
+
+\fs20 o 
+\fs24 use uintptr_t and intptr_t for pointer arithmetic\
+
+\fs20 o 
+\fs24 implement safe casting between different stdint types\
+
+\fs20 o 
+\fs24 show integer promotion rules with stdint types\
+
+\fs20 o 
+\fs24 use stdint types in cross-platform code examples\
+
+\fs20 o 
+\fs24 demonstrate wrap-around behavior of unsigned stdint types\
+
+\fs20 o 
+\fs24 use PRId32 and similar macros for printf format specifiers\
+
+\fs20 o 
+\fs24 write functions that depend on integer width guarantees\
+
+\fs20 o 
+\fs24 explain aliasing rules when using stdint types\
+
+\fs20 o 
+\fs24 use stdint types in bit fields (if supported)\
+
+\fs20 o 
+\fs24 handle endianess when working with stdint types\
+
+\fs20 \'95 
+\fs24 stdbool.h\
+
+\fs20 o 
+\fs24 use bool type and true/false macros\
+
+\fs20 o 
+\fs24 demonstrate boolean expressions and conversions\
+
+\fs20 o 
+\fs24 write code that returns bool from functions\
+
+\fs20 \'95 
+\fs24 compare bool with int in conditions and assignments\
+
+\fs20 \'95 
+\fs24 show size of bool vs char vs int\
+
+\fs20 \'95 
+\fs24 implement a flag system using bool arrays\
+
+\fs20 \'95 
+\fs24 demonstrate short-circuit evaluation with bool expressions\
+
+\fs20 \'95 
+\fs24 write complex boolean expressions with &&, ||, !\
+
+\fs20 \'95 
+\fs24 explain default initialization of bool variables\
+
+\fs20 \'95 
+\fs24 use bool in control flow like if, while, for\
+
+\fs20 \'95 
+\fs24 combine bool with bitwise operators and explain results\
+
+\fs20 \'95 
+\fs24 show conversion between bool and other numeric types\
+
+\fs20 \'95 
+\fs24 implement custom boolean type before stdbool.h\
+
+\fs20 \'95 
+\fs24 analyze performance differences using bool vs int\
+
+\fs20 \'95 
+\fs24 demonstrate boolean logic simplification in C code\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\qj\partightenfactor0
+\ls2\ilvl0
+\f3\i0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}
+\fs20 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a macro 
+\f5 SWAP(type, a, b)
+\f3  that swaps two variables of any type without a temporary variable.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a safe variadic macro 
+\f5 LOG(fmt, ...)
+\f3  that prints the filename, line number, and formatted message.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create a type-generic 
+\f5 max
+\f3  macro using 
+\f5 _Generic
+\f3  for 
+\f5 int
+\f3 , 
+\f5 float
+\f3 , and 
+\f5 double
+\f3 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a program to print sizes and alignments of all standard C types using 
+\f5 sizeof
+\f3  and 
+\f5 _Alignof
+\f3 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Demonstrate undefined behavior with a sequence point example, then fix it.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a struct with function pointers to simulate polymorphism (simple inheritance).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a function processing a 
+\f5 va_list
+\f3  to handle 
+\f5 %d
+\f3 , 
+\f5 %f
+\f3 , 
+\f5 %s
+\f3  format specifiers.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a statically allocated circular buffer for 
+\f5 char
+\f3  (no dynamic memory).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a multi-file example showing difference between 
+\f5 static
+\f3  and 
+\f5 extern
+\f3  linkage.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create a memory-efficient packed struct using bit-fields and unions.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write code showing type punning with unions and explain strict aliasing impact.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a simple recursive function and then convert it to an iterative one using manual stack with 
+\f5 alloca
+\f3 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Demonstrate usage of 
+\f5 atexit()
+\f3  with multiple registered handlers and order of execution.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a small custom allocator with fixed-size memory block supporting 
+\f5 malloc
+\f3  and 
+\f5 free
+\f3 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a function using 
+\f5 setjmp
+\f3 /
+\f5 longjmp
+\f3  for error handling without crashing.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a macro to count the number of arguments in a variadic macro.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a program that reverses a string in-place using only pointer arithmetic (no array indexing).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Create a macro that triggers a compile-time error if a type\'92s size isn\'92t expected (using 
+\f5 _Static_assert
+\f3  or equivalent).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Write a multi-module program demonstrating opaque pointers to hide implementation details.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	
+\f4 \uc0\u8259 
+\f3 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Implement a plug-in system with function pointers in structs to switch behavior at runtime.
+\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2\i \cf0 \outl0\strokewidth0 \
+}
